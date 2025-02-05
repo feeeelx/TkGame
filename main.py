@@ -1,12 +1,26 @@
-import customtkinter
+import customtkinter as ctk
 
-def button_callback():
-    print("button clicked")
 
-app = customtkinter.CTk()
-app.geometry("400x150")
 
-button = customtkinter.CTkButton(app, text="my button", command=button_callback)
-button.pack(padx=20, pady=20)
+root = ctk.CTk()
+root.geometry("400x150")
 
-app.mainloop()
+
+
+def ClickOnClicker():
+    print('dd')
+
+clicker = ctk.CTkButton(root, text="my button", command=ClickOnClicker)
+clicker.pack(padx=20, pady=20)
+
+
+
+
+
+
+
+
+
+
+
+root.mainloop()
