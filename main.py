@@ -1,25 +1,15 @@
 import tkinter as tk
+import os
 
-gamelist = ['1', '2']
+FolderDir = "C:\\Users\\felix\\Downloads\\d"
 
-
-gamechoice = str(input("'Pile ou face (1)', 'Secret button (2)'"))
-
-
-def CoinGame():
-    CoinGameWindow = tk.Tk()
+def MakeFolders():
+    os.makedirs(FolderDir + '\\ok', exist_ok=True)
 
 
+root = tk.Tk()
+button = tk.Button(root, text='ttt', command=MakeFolders)
+button.pack()
 
 
-
-
-    CoinGameWindow.mainloop()
-
-
-while True:
-    if gamechoice in gamelist:
-        if gamechoice == '1':
-            CoinGame()
-        if gamechoice == '2':
-            print('2')
+tk.mainloop()
